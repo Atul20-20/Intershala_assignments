@@ -29,16 +29,16 @@
 		<center>   
 			<h1 style="color: #ff3385; font-size:25px;"> Password validation </h1>  
 			  
-			<form onsubmit ="return verifyPassword()">  
+			<form onsubmit ="return verify_Password()">  
 				<!-- Enter Password -->  
 				<tr>
 				<td> Username </td>  
-				<td><input class="user_name" type = "text" placeholder="Atul Kashyap"></td>
+				<td><input class="user_name" type = "text" placeholder="eg:- Atul Kashyap"></td>
 					<br><br> 
 				</tr>
 				<tr>
 					<td> Enter Password </td>  
-				<td><input class="pass" type = "password" id = "pswd" value = "" placeholder="@12a45!@"></td> <br><br>   
+				<td><input class="pass" type = "password" id = "pswd" value = "" placeholder="eg:- @12a45!@"></td> <br><br>   
 				<td><span id = "message" style="color:#000000"> </span></td> <br><br> 
 				  </tr>  
 				<input type = "submit" value = "Submit">  
@@ -48,17 +48,17 @@
 		</center>  
 	</body>
 		<script>  
-		function verifyPassword() {  
+		function verify_Password() {  
 		  var pass_valid = document.getElementById("pswd").value;    
 		  if(pass_valid == "") {  
 			 document.getElementById("message").innerHTML = "Required field";  
 			 return false;  
 		  }   
-		  if(pass_valid.length < 8) {  
+		  if(pass_valid.length < 5) {  
 			 document.getElementById("message").innerHTML = "Atleast 8 characters required";  
 			 return false;  
 		  }   
-		  if(pass_valid.length > 15) {  
+		  if(pass_valid.length > 11) {  
 			 document.getElementById("message").innerHTML = "Password length is too large";  
 			 return false;  
 		  } else {  
