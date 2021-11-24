@@ -1,0 +1,69 @@
+<html>  
+	<head>  
+		<title> Verification of valid Password </title>
+		<style>
+		.user_name
+		{
+			margin-left: 40px;
+		
+		}
+		.pass{
+			margin-left: 5px;
+		
+		}
+		form{
+			height: 150px;
+			width: 400px;
+			background-color: #ffcccc;
+			text-align: center;
+			
+		
+		}
+		form:hover{
+			background-color: #ff33ff;
+		}
+		</style>
+	</head>  
+	
+	<body>  
+		<center>   
+			<h1 style="color: #ff3385; font-size:25px;"> Password validation </h1>  
+			  
+			<form onsubmit ="return verifyPassword()">  
+				<!-- Enter Password -->  
+				<tr>
+				<td> Username </td>  
+				<td><input class="user_name" type = "text" placeholder="Atul Kashyap"></td>
+					<br><br> 
+				</tr>
+				<tr>
+					<td> Enter Password </td>  
+				<td><input class="pass" type = "password" id = "pswd" value = "" placeholder="@12a45!@"></td> <br><br>   
+				<td><span id = "message" style="color:#000000"> </span></td> <br><br> 
+				  </tr>  
+				<input type = "submit" value = "Submit">  
+				   
+				<button type = "reset" value = "Reset" >Reset</button>  
+			</form>  
+		</center>  
+	</body>
+		<script>  
+		function verifyPassword() {  
+		  var pass_valid = document.getElementById("pswd").value;    
+		  if(pass_valid == "") {  
+			 document.getElementById("message").innerHTML = "Required field";  
+			 return false;  
+		  }   
+		  if(pass_valid.length < 8) {  
+			 document.getElementById("message").innerHTML = "Atleast 8 characters required";  
+			 return false;  
+		  }   
+		  if(pass_valid.length > 15) {  
+			 document.getElementById("message").innerHTML = "Password length is too large";  
+			 return false;  
+		  } else {  
+			 alert("Password is correct");  
+		  }  
+		}  
+	</script> 
+</html>
